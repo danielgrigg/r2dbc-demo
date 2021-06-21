@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: xyz.grigg
+testFramework: kotest
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [app-name, data, data-r2dbc, gradle, h2, http-client, kotest, kotlin, kotlin-application, logback, netty-server, r2dbc, readme, shade, yaml]

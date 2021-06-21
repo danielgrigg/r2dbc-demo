@@ -1,0 +1,23 @@
+micronaut:
+  application:
+    name: mysqlDemo
+r2dbc:
+  datasources:
+    default:
+      url: r2dbc:mysql://127.0.0.1:3306/db
+      username: root
+      password: ''
+      schema-generate: CREATE_DROP
+      dialect: MYSQL
+flyway:
+  datasources:
+    default:
+      enabled: true
+      url: jdbc:mysql://127.0.0.1:3306/db
+      username: root
+      password: ''
+      baseline-on-migrate: true
+endpoints:
+  flyway:
+    enabled: true
+    sensitive: false

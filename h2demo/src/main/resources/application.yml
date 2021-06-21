@@ -1,0 +1,24 @@
+micronaut:
+  application:
+    name: h2demo
+r2dbc:
+  datasources:
+    default:
+      schema-generate: CREATE_DROP
+      dialect: H2
+      url: r2dbc:h2:mem:///testdb;DB_CLOSE_ON_EXIT=FALSE
+      username: sa
+      password: ''
+flyway:
+  datasources:
+    default:
+      enabled: true
+      url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      username: sa
+      password: ''
+      baseline-on-migrate: true
+      locations: migrations
+endpoints:
+  flyway:
+    enabled: true
+    sensitive: false
